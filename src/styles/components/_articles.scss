@@ -1,0 +1,35 @@
+// Articles.scss
+
+.articles-container {
+    max-width: 50rem;
+    margin: 10rem auto;
+    padding: 10rem;
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .article-list {
+    list-style: none;
+    padding: 0;
+    margin: 5rem
+  }
+  
+  .article-item {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    background-color: #fff;
+  }
+  
+  .article-link {
+    color: #007bff;
+    text-decoration: none;
+  
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  

@@ -1,0 +1,78 @@
+// About.scsssss very strange behavior with this
+.about-container {
+    max-width: 50rem;
+    margin: 1rem auto;
+    padding: 1rem;
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f8f8;
+    border-radius: 0.8rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+  }
+  
+  .title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 1.7rem;
+    text-align: center;
+  }
+  
+  .paragraph {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 0.75rem;
+  }
+  
+  .list-container {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    padding: 2rem;
+  }
+  
+  .list-item-container {
+    border: 1px solid #ddd;
+    border-radius: 0.4rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: #fff;
+  }
+  
+  h1, h4 {
+    color: #333;
+    padding: 0;
+    margin: 0;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    font-size: 2rem;
+    line-height: 1.2;
+    color: #666;
+  }
+  
+  .last-note-container {
+    background-color: #FFBD59;
+    border: 1px solid #FFBD59;
+    border-radius: 0.4rem;
+    padding: 3rem;
+    margin: 3rem;
+  }
+  
+  .about-item {
+    border: 1px solid #ddd;
+    border-radius: 0.4rem;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    background-color: #fff;
+  }
+
+  .about-details {
+    color: #666;
+  }
+
+  .topic {
+    font-weight: bold;
+  }

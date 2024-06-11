@@ -1,0 +1,42 @@
+.container {
+  max-width: 70rem;
+  margin: 0 auto;
+  padding: 0 1.6rem;
+}
+
+
+
+.container .mini-container:last-child {
+  margin-right: 0;
+}
+
+
+.button-container {
+  width: 100%;
+  margin-bottom: 1.6rem;
+}
+
+.container-result {
+  display: block;
+  flex-direction: column;
+  max-width: 70rem;
+  margin: 0 auto;
+  padding: 0 1.6rem;
+}
+
+@media (min-width: 768px) {
+  .container-result {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .mini-container {
+    width: 48%;
+    flex: 1;
+    max-width: 35rem;
+    margin-right: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    padding: 0 1.6rem;
+  }
+}

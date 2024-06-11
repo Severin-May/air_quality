@@ -1,0 +1,42 @@
+// FAQ.scss
+
+.faq-container {
+    max-width: 50rem;
+    margin: 2rem auto;
+    padding: 2rem;
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f8f8;
+    border-radius: 0.8rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+  }
+  
+  .faq-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .faq-item {
+    border: 1px solid #ddd;
+    border-radius: 0.4rem;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    background-color: #fff;
+  }
+  
+  .faq-question {
+    margin-bottom: 0.5rem;
+  }
+  
+  .faq-answer {
+    color: #666;
+  }
+  
+  .faq-link {
+    color: #007bff;
+    text-decoration: none;
+  
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  

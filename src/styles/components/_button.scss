@@ -1,0 +1,38 @@
+.big-button {
+    background-color: #8357c5;
+    border: none;
+    border-bottom: .6rem solid #5e359a;
+    color: white;
+    font-weight: bold;
+    font-size: 4.8rem;
+    padding: 2.4rem;
+    width: 100%;
+}
+
+@media(min-width: 45rem) {
+    .big-button {
+        margin-bottom: 4.8rem;
+    }
+}
+
+.big-button:disabled {
+    opacity: .5;
+}
+
+.button {
+    background: #8357c5;
+    border: none;
+    border-bottom: .3rem solid #5e359a;
+    color: white;
+    font-weight: 500;
+    padding: 1.2rem;
+    width: 100%;
+
+}
+
+.button--link {
+    background: none;
+    border: none;
+    color: #a5afd7;
+    padding: 0;
+}
