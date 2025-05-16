@@ -5,7 +5,7 @@ const Header = (props) => {
     return (
         <nav className="header-wrapper">
             <div className="logo">
-                <NavLink to="/" className="brand header__title"><img className="logo-icon" src={"../../resources/favicon.png"}/></NavLink>
+                <NavLink to="/" className="brand header__title"><img className="logo-icon" src={"../../resources/aqi.png"}/></NavLink>
                 <NavLink to="/" className="brand header__title">{props.title}</NavLink>
             </div>
             <div className="nav-wrapper">
@@ -21,7 +21,7 @@ const Header = (props) => {
 }
 
 Header.defaultProps = {
-    title: "ECG-classifier default"
+    title: "Air quality prediction"
 }
 
 export default Header;

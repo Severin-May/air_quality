@@ -8,7 +8,7 @@ import ClassifyingAnimation from "./ClassifyingAnimation";
 export default class ECGClassifier extends React.Component {
 
     state = {
-        selectedFile: null,
+        selectedDate: '',
         options: [],
         selectedModel: undefined,
         isLoading: false,
@@ -38,30 +38,19 @@ export default class ECGClassifier extends React.Component {
         }
     }
 
-    handleUploadFile = (file) => {
-        const allowedTypes = ["text/csv"];
-        if (file && !allowedTypes.includes(file.type)) {
-            this.setState({
-                selectedFile: null,
-            });
-            console.log("handleUploadFile");
-            return "Incorrect file format! It should be .CSV";
-        }
-
-        this.setState({
-            selectedFile: file,
-        });
-    }
+    handleDateChange = (event) => {
+        this.setState({ selectedDate: event.target.value });
+    };
 
     handleClassify = (event) => {
         event.preventDefault();
         this.setState({ isLoading: true, resultData: null });
 
         const formData = new FormData();
-        formData.append('file', this.state.selectedFile);
+        formData.append('date', this.state.selectedDate);
         formData.append('model', this.state.selectedModel);
 
-        axios.post('http://localhost:5000/api/v1/file-upload', formData, {
+        axios.post('https://e06e-35-237-54-191.ngrok-free.app/api/v1/predict', formData, {
             headers: {
                 'Content-Type': 'multipart/form-data'
             }
@@ -69,7 +58,7 @@ export default class ECGClassifier extends React.Component {
             console.log("Response:", resp.data);
             this.setState({ isLoading: false, resultData: resp.data });
         }).catch(error => {
-            console.error('Error uploading file:', error);
+            console.error('Error during prediction:', error);
             this.setState({ isLoading: false });
         });
     }
@@ -80,8 +69,8 @@ export default class ECGClassifier extends React.Component {
     }
 
     render() {
-        const title = "ECG-classifier";
-        const subtitle = "Let's scan your heartbeat for VEB arrythmias. Use records 106, 107, 112, 116, 201, 212, 215, 228, 231 for testing"
+        const title = "Air pollution prediction";
+        const subtitle = "Pick a date"
         return (
             <div className="content">
                 <div className="container">
@@ -92,10 +81,15 @@ export default class ECGClassifier extends React.Component {
                         {subtitle}
                     </div>
                     <div className="widget">
-                        <ECGInput handleUploadFile={this.handleUploadFile} handleSelectedModel={this.handleSelectedModel} />
+                        <ECGInput 
+                            selectedDate={this.state.selectedDate} 
+                            selectedModel={this.state.selectedModel}
+                            handleDateChange={this.handleDateChange} 
+                            handleSelectedModel={this.handleSelectedModel} 
+                        />
                     </div>
                     <div>
-                        <Classify inputReceived={!this.state.isLoading && this.state.selectedFile != null}
+                        <Classify inputReceived={!this.state.isLoading && this.state.selectedDate !== '' && this.state.selectedModel !== undefined}
                             handleClassify={this.handleClassify}>
                         </Classify>
                     </div>
@@ -107,9 +101,7 @@ export default class ECGClassifier extends React.Component {
                 <div>
                     <h4 className="last-note-container">
                         NOTE:
-                        This program is designed to predict diseases based on provided input data, but it is not
-                        a replacement for professional medical diagnosis. The predictions made by this program are
-                        for informational purposes only and should not be used as a definitive diagnosis.
+                        This program is designed to predict air pollution for the selected date
                     </h4>
                 </div>
             </div>
