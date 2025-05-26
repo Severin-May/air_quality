@@ -50,6 +50,7 @@ export default class ECGInput extends React.Component {
                         <option value="random_forest_regressor" className="menu-item">Random Forest Regressor</option>
                         <option value="extra_trees_regressor" className="menu-item">Extra Trees Regressor</option>
                         <option value="xgb_regressor" className="menu-item">XGB Regressor</option>
+                        <option value="lstm" className="menu-item">LSTM</option>
                     </select>
 
                     <select className="dropdown" value={this.props.selectedDate || ''} onChange={this.handleDateChange}>

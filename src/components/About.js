@@ -7,10 +7,10 @@ const About = () => {
     const details = [];
 
     const content = [
-        { topic: "Keywords:", details: "ECG, Binary Classification, Adaptive Transformations, Variable projection, Neural Networks" },
-        { topic: "Stack:", details: "JavaScript (React.js), Python (Pytorch), Node.js, Babel, Webpack, SCSS" },
-        { topic: "Acknowledgments:", details: "My supervisor, Tamás Dózsa, family and friends, ELTE CS faculty professors" },
-        { topic: "Supervisor:", details: "Tamás Dózsa" },
+        { topic: "Keywords:", details: "Air pollution, Machine Learning, XGB Regressor, Random Forest Regressor, Extra Trees Regressor, Neural Networks, PM2.5, PM10, AQI" },
+        { topic: "Stack:", details: "JavaScript (React.js), Python (pandas, scikit-learn, numpy), Node.js, Babel, Webpack, SCSS" },
+        { topic: "Acknowledgments:", details: "My supervisor, Hossam" },
+        { topic: "Supervisor:", details: "AL-Magsoosi Husam Kareem Farhan" },
         { topic: "Developer:", details: "Aichurok Kanatbekova" },
     ];
 
@@ -18,8 +18,8 @@ const About = () => {
         <div className="articles-container">
             <div>
                 <h1 className="title">
-                    This program is the final result of a Bachelor's degree thesis project at ELTE University,
-                    Computer Science (BSc). It was developed using the following tools and resources:
+                    This program is the final result of a Project Lab independent course at BME University, Computer Science (MSc). 
+                    It was developed using the following tools and resources:
                 </h1>
             </div>
             <div className="list-container">
@@ -34,18 +34,13 @@ const About = () => {
                     ))}
                     <li className="article-list">
                         <div className="about-details topic">Source code repositories:</div>
-                        <div className="about-details"><a href="https://gitlab.com/minihorse5/ECG-classifier-backend">backend</a> <a href="https://gitlab.com/minihorse5/ecg-classifier-frontend">frontend</a></div>
+                        <div className="about-details"><a href="https://github.com/Severin-May/air_quality_be">backend</a> <a href="https://github.com/Severin-May/air_quality">frontend</a></div>
                     </li>
                 </ul>
             </div>
 
             <div>
-                <h4 className="last-note-container">
-                    NOTE:
-                    This program is designed to predict diseases based on provided input data, but it is not
-                    a replacement for professional medical diagnosis. The predictions made by this program are
-                    for informational purposes only and should not be used as a definitive diagnosis.
-                </h4>
+
             </div>
         </div>
     );
